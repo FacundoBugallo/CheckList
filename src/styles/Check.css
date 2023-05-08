@@ -1,0 +1,188 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+
+body{
+  background-image: url(../../img/peakpx\ \(1\).jpg);
+}
+
+/* For Scrollbar */
+
+::-webkit-scrollbar{
+ width: 6px; 
+}
+
+::-webkit-scrollbar-track{
+  background-color: #d5fffb
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background-color: #007e72;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #00312c;
+}
+
+.container{
+  border: 3px #241101 solid;
+  text-align: center;
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 25vh auto;
+  background-color: #9a6b40;
+  box-shadow: 0 4px 4px #241101;
+}
+
+.container h1 {
+  background-color: #392727;
+  color: blanchedalmond;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.container .input-field{
+  position: relative;
+  height: 64px;
+  width: 100%;
+}
+
+.input-field textarea{
+  color: #3d1c0a;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 8px;
+  padding: 18px 45px 18px 15px;
+  border: 3px dashed #4d3520;
+  resize: none;
+  background-color: #be8b3c;
+}
+
+.input-field textarea:focus{
+  border: 3px solid #4d3520;
+}
+
+textarea::-webkit-scrollbar{
+  display: none;
+}
+
+.input-field .note-icon{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events:none;
+  font-size: 24px;
+  color: #392727;
+}
+
+.input-field textarea:focus{
+  color: #3d1c0a;
+}
+
+.container .todoLists{
+  max-width: 380px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.todoLists .list{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  background-color: #ba945a;
+  padding: 20px 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+li {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3d1c0a;
+}
+
+.todoLists .list input{
+  height: 20px;
+  min-width: 20px;
+  accent-color: #632d10;
+  pointer-events: none;
+}
+
+.todoLists .list .task{
+  margin: 0 30px 0 15px;
+  word-break: break-all;
+}
+
+
+.list input:checked ~ .task{
+  text-decoration: line-through;
+}
+
+.todoLists .list i{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 5px;
+  color: #0d4b10;
+  padding: 5px;
+  opacity: 0.6;
+  display: none;
+}
+
+.todoLists .list:hover i{
+  display: inline-flex;
+}
+
+.todoLists .list i:hover{
+  opacity: 1;
+}
+
+.container .pending-tasks{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.pending-tasks span {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #632d10;
+  font-size: 20px;
+  background-color: #be8b3c;
+  border-radius: 4px;
+  padding: 4px;
+  font-weight:600;
+}
+
+.pending-tasks .clear-button {
+  font-weight:900;
+  padding: 6px 12px;
+  outline:none;
+  border: none;
+  background-color: #be8b3c;
+  color: #632d10;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.clear-button:hover{
+  background-color: #392e1b;
+}
